@@ -1,0 +1,12 @@
+* {
+    background-image: url('../images/scope.svg');
+    /* background-color: rgb(55, 69, 69); */
+}
+
+[href]{
+    color: rgba(213, 121, 15, 0.82);
+ }
+
+ [href]:hover {
+    color: lime;
+  }
