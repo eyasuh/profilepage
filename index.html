@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eyasu Haile | Profile Page</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="Eyasu Haile profile page" content="portfolio of projects and achievements">
+    <link rel="stylesheet" href="css/style.css"/>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -17,27 +18,59 @@
 <body>
     <!-- Navigation-->
     <header>
-        <nav>
-            <ul>
-                <h1>
+        <nav role="navigation">
+            <ul class="navbar">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Me</a></li>
                     <li><a href="https://github.com/eyasuh" target="blanck">GitHub<i
                                 class="fa-brands fa-github-square"></i></a></li>
-                </h1>
             </ul>
         </nav>
     </header>
+
+    <dl>
+        <dt>key</dt>
+            <dd>value</dd>
+        <dt>key2</dt>
+            <dd>value</dd>
+        <dt>key3</dt>
+            <dd>value</dd>
+    </dl>
+
     <main>
         <section>
             <article>
-                <h1>About me</h1>
-                <p>Comming Soon</p>
+                <h4>WELLCOME TO MY PAGE, MY NAME IS</h4>
+                <h1>Eyasu Haile</h1>
+                <p>I am a full-stack developer</p>
+                <a href="#">CHECK OUT MY RESUME</a>
             </article>
         </section>
     </main>
+    <section class="projects">Projects</section>
+    <section class="achievements">Achievements</section>
     <footer>
        <h4>Contact me</h4>
+       <form action="#" method="post">
+           <label>
+                Name
+                <input name="name" type="text" placeholder="name">
+           </label>
+           <label>
+                Email
+                <input name="email" type="email" required placeholder="user@email.com" />
+            </label>
+            <label>
+                Message
+                <textarea placeholder="Send me a message." cols="30" rows="10"></textarea>
+            </label>
+            <label>
+                PDF File
+                <input type="file" accept="PDF/*" multiple>
+            </label>
+
+           <button type="submit">Send</button>
+       </form>
     </footer>
 </body>
 

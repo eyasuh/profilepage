@@ -1,12 +1,73 @@
 * {
-    background-image: url('../images/scope.svg');
-    /* background-color: rgb(55, 69, 69); */
+    box-sizing: border-box;
+    border:2px dotted red;
 }
 
-[href]{
-    color: rgba(213, 121, 15, 0.82);
- }
+body {
+    background-image: url('../images/scope.svg');
+    font-family: 'Raleway', sans-serif;
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer" 
+    ;
+    /* gap: 2px; */
+}
 
- [href]:hover {
+[href] {
+    color: rgba(213, 121, 15, 0.82);
+}
+
+[href]:hover {
     color: lime;
-  }
+}
+
+header {
+    grid-area: header;
+    position: relative;
+    top: 5px;
+    margin: 2%;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.navbar li {
+    margin: 3% 2%;
+    padding: 20px;
+    border: 6px solid coral;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+input:focus {
+    outline: 2px solid blue;
+}
+
+input:invalid:not(:focus) {
+    outline: 2px solid red;
+}
+
+/* pseudo element  */
+h4::first-letter {
+    font-size: 2em;
+}
+
+footer {
+    position: absolute;
+    bottom: 1.5em;
+    height: 20vh;
+}
