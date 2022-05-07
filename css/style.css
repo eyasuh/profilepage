@@ -1,10 +1,14 @@
 * {
     box-sizing: border-box;
-    border:2px dotted red;
+    /* border:2px dotted red; */
 }
 
 body {
     background-image: url('../images/scope.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50%;
+    background-size: cover;
     font-family: 'Raleway', sans-serif;
     color: aliceblue;
     display: grid;
@@ -12,7 +16,7 @@ body {
     grid-template-rows: 1fr 4fr 1fr;
     grid-template-areas:
         "header header"
-        "main main"
+        "main data"
         "footer footer" 
     ;
     /* gap: 2px; */
@@ -28,8 +32,6 @@ body {
 
 header {
     grid-area: header;
-    position: relative;
-    top: 5px;
     margin: 2%;
 }
 
@@ -42,16 +44,24 @@ header nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    list-style-type: none;
 }
 .navbar li {
     margin: 3% 2%;
     padding: 20px;
     border: 6px solid coral;
-    width: 100%;
+    width: 80%;
     text-align: center;
     font-weight: 700;
     font-size: 2em;
 }
+.navbar li:hover {
+    width: 20%;
+}
+main {
+    grid-area: main; 
+}
+
 
 input:focus {
     outline: 2px solid blue;
@@ -67,7 +77,6 @@ h4::first-letter {
 }
 
 footer {
-    position: absolute;
-    bottom: 1.5em;
+    grid-area: footer;
     height: 20vh;
 }
